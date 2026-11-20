@@ -5,7 +5,9 @@
     }
   },
   "routes": [
+    { "src": "/(app|core|config|data)/(.*)", "status": 404 },
     { "handle": "filesystem" },
+    { "src": "/assets/(.*)", "dest": "/public/assets/$1" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
