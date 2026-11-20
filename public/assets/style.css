@@ -281,7 +281,71 @@ body{
   .complaint-contact>span:last-child{white-space:normal;overflow-wrap:anywhere}
 }
 @supports (height:100dvh){
-  .complaint-menu{max-height:min(32rem,calc(100dvh - 2rem))}
+  .complaint-menu{max-height:min(32rem,calc(100dvh - 2rem))
+                 /* ---------- Animasi pop up pengaduan ---------- */
+.complaint-menu{transform-origin:bottom right}
+
+.complaint-menu:not(.hidden){
+  animation:complaint-menu-in .32s cubic-bezier(.34,1.56,.64,1) both;
+}
+.complaint-menu.is-closing{
+  animation:complaint-menu-out .18s ease-in both;
+  pointer-events:none;
+}
+
+/* Kontak muncul satu per satu */
+.complaint-menu:not(.hidden):not(.is-closing) .complaint-contact{
+  animation:complaint-item-in .35s ease both;
+}
+.complaint-menu:not(.hidden):not(.is-closing) .complaint-contact:nth-child(1){animation-delay:.08s}
+.complaint-menu:not(.hidden):not(.is-closing) .complaint-contact:nth-child(2){animation-delay:.14s}
+.complaint-menu:not(.hidden):not(.is-closing) .complaint-contact:nth-child(3){animation-delay:.20s}
+.complaint-menu:not(.hidden):not(.is-closing) .complaint-contact:nth-child(4){animation-delay:.26s}
+
+/* Ikon WA "pop" saat menu terbuka */
+.complaint-fab.is-open svg{
+  animation:complaint-fab-pop .4s cubic-bezier(.34,1.56,.64,1);
+}
+
+@keyframes complaint-menu-in{
+  from{opacity:0;transform:translateY(14px) scale(.88)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes complaint-menu-out{
+  from{opacity:1;transform:translateY(0) scale(1)}
+  to{opacity:0;transform:translateY(10px) scale(.92)}
+}
+@keyframes complaint-item-in{
+  from{opacity:0;transform:translateX(12px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes complaint-fab-pop{
+  0%{transform:scale(1) rotate(0)}
+  40%{transform:scale(.8) rotate(-12deg)}
+  100%{transform:scale(1) rotate(0)}
+}
+
+/* Mobile: overlay memudar, sheet naik dari bawah */
+@media(max-width:520px){
+  .complaint-menu:not(.hidden){animation:complaint-overlay-in .22s ease both}
+  .complaint-menu:not(.hidden) .complaint-menu-sheet{
+    animation:complaint-sheet-in .38s cubic-bezier(.22,1,.36,1) both;
+  }
+  .complaint-menu.is-closing{animation:complaint-overlay-out .18s ease-in both}
+  .complaint-menu.is-closing .complaint-menu-sheet{
+    animation:complaint-sheet-out .18s ease-in both;
+  }
+}
+@keyframes complaint-overlay-in{from{opacity:0}to{opacity:1}}
+@keyframes complaint-overlay-out{from{opacity:1}to{opacity:0}}
+@keyframes complaint-sheet-in{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes complaint-sheet-out{
+  from{opacity:1;transform:translateY(0)}
+  to{opacity:0;transform:translateY(30px)}
+}}
   @media(max-width:520px){
     .complaint-menu{max-height:none}
     .complaint-menu-sheet{max-height:calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom))}
@@ -334,6 +398,7 @@ body{
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   #complaint-widget{transition:none}
+   .complaint-menu,.complaint-menu *,.complaint-fab.is-open svg{animation:none!important}
   .motion-ready .motion-target{opacity:1;transform:none;will-change:auto}
   .gradient-text,.hero-card::after,.hero-pin,.creator-credit{animation:none}
 }
