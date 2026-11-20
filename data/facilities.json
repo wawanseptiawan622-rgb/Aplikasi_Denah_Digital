@@ -1,0 +1,305 @@
+[
+  {
+    "id": 1,
+    "name": "Pos Ronda RT 08",
+    "category": "keamanan",
+    "lat": -6.299161,
+    "lng": 106.4751,
+    "description": "Pos jaga warga. Ronda malam dilakukan bergilir setiap hari.",
+    "address": "Jl. Sukamana Tatira"
+  },
+  {
+    "id": 2,
+    "name": "Masjid Kp Sukamanah Tapos",
+    "category": "ibadah",
+    "lat": -6.2994237,
+    "lng": 106.4728899,
+    "description": "Masjid warga untuk salat berjamaah dan kegiatan keagamaan.",
+    "address": "Kp. Sukamanah, Tapos"
+  },
+  {
+    "id": 7,
+    "name": "Pondok Pesantren AN-NIDZOM",
+    "category": "ibadah",
+    "lat": -6.2997776,
+    "lng": 106.4729181,
+    "description": "Pondok pesantren untuk kegiatan pendidikan dan keagamaan.",
+    "address": "Kp. Sukamanah, Tapos"
+  },
+  {
+    "id": 8,
+    "name": "Pemancingan Taslim (Waru Doyong)",
+    "category": "umum",
+    "icon": "🎣",
+    "lat": -6.2993064,
+    "lng": 106.4742535,
+    "description": "Tempat pemancingan di kawasan Waru Doyong.",
+    "address": "Waru Doyong, Tapos"
+  },
+  {
+    "id": 9,
+    "name": "Kedai Tifanny",
+    "category": "umum",
+    "icon": "☕",
+    "lat": -6.3000196,
+    "lng": 106.4745126,
+    "description": "Kedai di wilayah Tapos.",
+    "address": "Tapos, Kec. Tigaraksa, Kabupaten Tangerang"
+  },
+  {
+    "id": 10,
+    "name": "Musholah Nuurul Ikhsan",
+    "category": "ibadah",
+    "icon": "🕌",
+    "lat": -6.3001867,
+    "lng": 106.4746499,
+    "description": "Mushola untuk kegiatan ibadah warga.",
+    "address": "Tapos, Kec. Tigaraksa, Kabupaten Tangerang"
+  },
+  {
+    "id": 11,
+    "name": "BENGKEL EZAA CHEBONG RACING TEAM #601",
+    "category": "umum",
+    "icon": "🔧",
+    "lat": -6.3001314,
+    "lng": 106.474017,
+    "description": "Bengkel kendaraan di wilayah Tapos.",
+    "address": "Tapos, Kec. Tigaraksa, Kabupaten Tangerang"
+  },
+  {
+    "id": 12,
+    "name": "Warung moni",
+    "category": "umum",
+    "icon": "🛒",
+    "lat": -6.2999705,
+    "lng": 106.4736674,
+    "description": "Warung di wilayah Tapos.",
+    "address": "Tapos, Kec. Tigaraksa, Kabupaten Tangerang"
+  },
+  {
+    "id": 13,
+    "name": "Rumah Ketua RT 09 (Bu Lia)",
+    "category": "pemerintahan",
+    "icon": "🏛️",
+    "lat": -6.300003,
+    "lng": 106.468079,
+    "description": "Rumah Ketua RT 09, Bu Lia.",
+    "address": "RT 09, Desa Tapos"
+  },
+  {
+    "id": 14,
+    "name": "Rumah Ketua RT 08 (Pak Karna)",
+    "category": "pemerintahan",
+    "icon": "🏛️",
+    "lat": -6.3001331,
+    "lng": 106.4727504,
+    "description": "Rumah Ketua RT 08, Pak Karna.",
+    "address": "RT 08, Desa Tapos"
+  },
+  {
+    "id": 15,
+    "name": "Kampus Smart Farm",
+    "category": "umum",
+    "icon": "🌱",
+    "lat": -6.295725,
+    "lng": 106.4768667,
+    "description": "Kampus Smart Farm.",
+    "address": "PF3G+HC3, RT./RW/RW.005, 002, Tapos, Kec. Tigaraksa, Kabupaten Tangerang, Banten 15720"
+  },
+  {
+    "id": 16,
+    "name": "SMKS BINA PUTRA TAPOS TIGARAKSA TANGERANG BANTEN",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.296862,
+    "lng": 106.47948,
+    "description": "Sekolah menengah kejuruan di wilayah Tapos.",
+    "address": "Tapos, Kec. Tigaraksa, Kabupaten Tangerang, Banten 15720"
+  },
+  {
+    "id": 17,
+    "name": "SD ISLAM BINA PUTRA",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.2965174,
+    "lng": 106.4790673,
+    "description": "Sekolah dasar Islam di wilayah Tapos.",
+    "address": "Tapos, Kec. Tigaraksa, Kabupaten Tangerang, Banten 15720"
+  },
+  {
+    "id": 18,
+    "name": "MTs Swasta Miftahul Ulum",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.2967054,
+    "lng": 106.4796155,
+    "description": "Madrasah tsanawiyah swasta di wilayah Tapos.",
+    "address": "Tapos, Kec. Tigaraksa, Kabupaten Tangerang, Banten 15720"
+  },
+  {
+    "id": 19,
+    "name": "TK Al Muniroh",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.29636,
+    "lng": 106.4799017,
+    "description": "Taman kanak-kanak Al Muniroh di wilayah Tapos.",
+    "address": "Tapos, Kec. Tigaraksa, Kabupaten Tangerang, Banten 15720"
+  },
+  {
+    "id": 20,
+    "name": "Yayasan Pendidikan Laduni",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.2910619,
+    "lng": 106.4799487,
+    "description": "Yayasan pendidikan Laduni di wilayah Tapos.",
+    "address": "Tapos, Kec. Tigaraksa, Kabupaten Tangerang, Banten 15720"
+  },
+  {
+    "id": 21,
+    "name": "Adria Pratama Mulya School",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.287432,
+    "lng": 106.4820393,
+    "description": "Sekolah Adria Pratama Mulya di wilayah Tigaraksa.",
+    "address": "Tigaraksa, Kabupaten Tangerang, Banten"
+  },
+  {
+    "id": 22,
+    "name": "MAN 1 Tangerang",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.2841534,
+    "lng": 106.476754,
+    "description": "Madrasah Aliyah Negeri 1 Tangerang.",
+    "address": "Tigaraksa, Kabupaten Tangerang, Banten"
+  },
+  {
+    "id": 23,
+    "name": "MILLENNIAL Futsal",
+    "category": "umum",
+    "icon": "⚽",
+    "lat": -6.2842265,
+    "lng": 106.4761104,
+    "description": "Lapangan futsal Millennial di wilayah Tigaraksa.",
+    "address": "Tigaraksa, Kabupaten Tangerang, Banten"
+  },
+  {
+    "id": 24,
+    "name": "Kantor Kepala Desa Tapos",
+    "category": "pemerintahan",
+    "icon": "🏛️",
+    "lat": -6.285942,
+    "lng": 106.474425,
+    "description": "Kantor pemerintahan dan pelayanan Desa Tapos.",
+    "address": "Jl. Aria Wangsakara No. Samping, Tapos, Kec. Tigaraksa, Kabupaten Tangerang, Banten 15720"
+  },
+  {
+    "id": 25,
+    "name": "SDN Tapos Wetan",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.2890348,
+    "lng": 106.4867419,
+    "description": "Sekolah dasar negeri di wilayah Tapos Wetan.",
+    "address": "Tapos Wetan, Kec. Tigaraksa, Kabupaten Tangerang, Banten"
+  },
+  {
+    "id": 26,
+    "name": "Tigaraksa Golf Residens",
+    "category": "umum",
+    "icon": "🏘️",
+    "lat": -6.2924703,
+    "lng": 106.4700709,
+    "description": "Kawasan residensial Tigaraksa Golf Residens.",
+    "address": "Tigaraksa, Kabupaten Tangerang, Banten"
+  },
+  {
+    "id": 27,
+    "name": "Stadion Mini Aria Wangsakara Tigaraksa",
+    "category": "umum",
+    "icon": "🏟️",
+    "lat": -6.2912414,
+    "lng": 106.4719234,
+    "description": "Stadion mini untuk kegiatan olahraga di Tigaraksa.",
+    "address": "Tigaraksa, Kabupaten Tangerang, Banten"
+  },
+  {
+    "id": 28,
+    "name": "SMPN 5 Tigaraksa",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.2924591,
+    "lng": 106.4721343,
+    "description": "Sekolah menengah pertama negeri di Tigaraksa.",
+    "address": "Tigaraksa, Kabupaten Tangerang, Banten"
+  },
+  {
+    "id": 29,
+    "name": "MIN 2 Tangerang",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.2959638,
+    "lng": 106.4751239,
+    "description": "Madrasah ibtidaiyah negeri di wilayah Tigaraksa.",
+    "address": "Tigaraksa, Kabupaten Tangerang, Banten"
+  },
+  {
+    "id": 30,
+    "name": "Panti Jompo-Pondok Lansia Berdikari",
+    "category": "umum",
+    "icon": "🏠",
+    "lat": -6.2902245,
+    "lng": 106.4764291,
+    "description": "Panti jompo dan pondok lansia Berdikari.",
+    "address": "Tigaraksa, Kabupaten Tangerang, Banten"
+  },
+  {
+    "id": 31,
+    "name": "SDN Tapos",
+    "category": "umum",
+    "icon": "🏫",
+    "lat": -6.2863503,
+    "lng": 106.473673,
+    "description": "Sekolah dasar negeri di Desa Tapos.",
+    "address": "Tapos, Kec. Tigaraksa, Kabupaten Tangerang, Banten"
+  },
+  {
+    "id": 3,
+    "name": "Rumah Ketua RT 08",
+    "category": "pemerintahan",
+    "lat": -6.299311,
+    "lng": 106.4749,
+    "description": "Pusat layanan administrasi warga tingkat RT.",
+    "address": "Jl. Sukamana Tatira"
+  },
+  {
+    "id": 4,
+    "name": "Rumah Ketua RW 03",
+    "category": "pemerintahan",
+    "lat": -6.299511,
+    "lng": 106.4744,
+    "description": "Pusat koordinasi RW 03.",
+    "address": "Jl. Sukamana Tatira"
+  },
+  {
+    "id": 5,
+    "name": "Posyandu Melati",
+    "category": "kesehatan",
+    "lat": -6.298811,
+    "lng": 106.4753,
+    "description": "Layanan kesehatan ibu dan anak. Jadwal setiap bulan.",
+    "address": "Jl. Sukamana Tatira"
+  },
+  {
+    "id": 6,
+    "name": "Fullsport46",
+    "category": "umum",
+    "lat": -6.2994568,
+    "lng": 106.4734672,
+    "description": "Lapangan olahraga Fullsport46.",
+    "address": "Kp. Sukamanah, Tapos"
+  }
+]
