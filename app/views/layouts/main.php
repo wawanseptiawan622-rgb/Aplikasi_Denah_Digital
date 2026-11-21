@@ -112,7 +112,7 @@
       <svg aria-hidden="true" class="h-8 w-8 fill-current" viewBox="0 0 24 24">
         <path d="M20.52 3.48A11.78 11.78 0 0 0 12.13 0C5.62 0 .32 5.3.32 11.81c0 2.08.54 4.1 1.57 5.89L.22 24l6.45-1.69a11.8 11.8 0 0 0 5.46 1.35h.01c6.51 0 11.81-5.3 11.81-11.81 0-3.16-1.23-6.13-3.43-8.37ZM12.14 21.65h-.01c-1.71 0-3.38-.46-4.84-1.33l-.35-.21-3.83 1 1.02-3.73-.23-.38a9.78 9.78 0 0 1-1.5-5.19c0-5.37 4.37-9.74 9.75-9.74a9.68 9.68 0 0 1 6.9 2.86 9.68 9.68 0 0 1 2.85 6.91c0 5.37-4.37 9.74-9.76 9.74Zm5.35-7.3c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.9 1.13-.17.19-.33.22-.62.08-.29-.14-1.21-.45-2.31-1.43-.85-.76-1.43-1.7-1.6-1.99-.16-.29-.02-.44.12-.58.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.08-.14-.64-1.55-.88-2.12-.23-.56-.47-.49-.64-.5h-.54c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.42s1.02 2.8 1.16 2.99c.14.19 2 3.05 4.85 4.28.68.29 1.21.47 1.62.6.68.21 1.3.18 1.79.11.55-.08 1.7-.7 1.94-1.38.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33Z"/>
       </svg>
-    </a>
+    </button>
   </div>
   <button id="show-complaint-widget" type="button"
     class="fixed right-0 bottom-8 z-[1000] hidden h-12 w-10 touch-none cursor-grab place-items-center rounded-l-xl border border-r-0 border-emerald-200 bg-white text-emerald-800 shadow-lg hover:bg-emerald-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-600 active:cursor-grabbing no-print"
@@ -142,19 +142,40 @@
       let suppressClick = false;
       let suppressShowClick = false;
       let hideTimer = null;
+      let menuCloseTimer = null;
       let dockSide = 'right';
 
+      const MENU_CLOSE_MS = 180; // samakan dengan durasi complaint-menu-out di CSS
+
+      function isMenuOpen() {
+        return !menu.classList.contains('hidden') && !menu.classList.contains('is-closing');
+      }
+
       function setComplaintMenuOpen(open) {
-        menu.classList.toggle('hidden', !open);
-        link.setAttribute('aria-expanded', String(open));
+        window.clearTimeout(menuCloseTimer);
+
         if (open) {
-          menu.querySelector('a').focus();
+          menu.classList.remove('hidden', 'is-closing');
+          link.classList.add('is-open');
+          link.setAttribute('aria-expanded', 'true');
+          menu.querySelector('a').focus({ preventScroll: true });
+          return;
         }
+
+        if (menu.classList.contains('hidden')) return;
+
+        link.classList.remove('is-open');
+        link.setAttribute('aria-expanded', 'false');
+        menu.classList.add('is-closing');
+        menuCloseTimer = window.setTimeout(() => {
+          menu.classList.add('hidden');
+          menu.classList.remove('is-closing');
+        }, MENU_CLOSE_MS);
       }
 
       link.addEventListener('click', () => {
         if (suppressClick) return;
-        setComplaintMenuOpen(menu.classList.contains('hidden'));
+        setComplaintMenuOpen(!isMenuOpen());
       });
 
       closeMenuButton.addEventListener('click', () => {
@@ -163,7 +184,7 @@
       });
 
       document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && !menu.classList.contains('hidden')) {
+        if (event.key === 'Escape' && isMenuOpen()) {
           setComplaintMenuOpen(false);
           link.focus();
         }
@@ -174,7 +195,7 @@
           setComplaintMenuOpen(false);
           return;
         }
-        if (!menu.classList.contains('hidden') && !widget.contains(event.target)) {
+        if (isMenuOpen() && !widget.contains(event.target)) {
           setComplaintMenuOpen(false);
         }
       });
