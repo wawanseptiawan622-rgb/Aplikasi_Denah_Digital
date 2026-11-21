@@ -281,8 +281,14 @@ body{
   .complaint-contact>span:last-child{white-space:normal;overflow-wrap:anywhere}
 }
 @supports (height:100dvh){
-  .complaint-menu{max-height:min(32rem,calc(100dvh - 2rem))
-                 /* ---------- Animasi pop up pengaduan ---------- */
+  .complaint-menu{max-height:min(32rem,calc(100dvh - 2rem))}
+  @media(max-width:520px){
+    .complaint-menu{max-height:none}
+    .complaint-menu-sheet{max-height:calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom))}
+  }
+}
+
+/* ---------- Animasi pop up pengaduan ---------- */
 .complaint-menu{transform-origin:bottom right}
 
 .complaint-menu:not(.hidden){
@@ -345,11 +351,6 @@ body{
 @keyframes complaint-sheet-out{
   from{opacity:1;transform:translateY(0)}
   to{opacity:0;transform:translateY(30px)}
-}}
-  @media(max-width:520px){
-    .complaint-menu{max-height:none}
-    .complaint-menu-sheet{max-height:calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom))}
-  }
 }
 
 /* ---------- Motion ---------- */
@@ -398,9 +399,9 @@ body{
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   #complaint-widget{transition:none}
-   .complaint-menu,.complaint-menu *,.complaint-fab.is-open svg{animation:none!important}
   .motion-ready .motion-target{opacity:1;transform:none;will-change:auto}
   .gradient-text,.hero-card::after,.hero-pin,.creator-credit{animation:none}
+  .complaint-menu,.complaint-menu *,.complaint-fab.is-open svg{animation:none!important}
 }
 
 /* ---------- Cetak: hanya area QR ---------- */
